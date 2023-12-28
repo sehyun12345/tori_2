@@ -22,19 +22,8 @@
 
     iframe {
       width: 100%;
-      height: 100vh; /* Set the height to the full viewport height */
-    }
-
-    @media only screen and (min-width: 640px) {
-      iframe {
-        height: 506px; /* Set a fixed height for larger screens */
-      }
-    }
-
-    @media only screen and (max-width: 640px) {
-      iframe {
-        height: 80vh; /* Adjust the height for smaller screens */
-      }
+      max-width: 640px; /* Set a maximum width for larger screens */
+      height: auto; /* Allow the height to adjust proportionally */
     }
   </style>
 </head>
@@ -42,4 +31,5 @@
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuRBjvJ_jFCkr16T4d5SoZC2yJM81f0OTHt9E8fxsuxG43Q/viewform?embedded=true" frameborder="0" scrolling="no">로드 중…</iframe>
 </body>
 </html>
+
 
