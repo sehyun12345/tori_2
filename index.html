@@ -17,6 +17,7 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Arial', sans-serif;
     }
 
     iframe {
@@ -29,9 +30,16 @@
         height: 506px; /* Set a fixed height for larger screens */
       }
     }
+
+    @media only screen and (max-width: 640px) {
+      iframe {
+        height: 80vh; /* Adjust the height for smaller screens */
+      }
+    }
   </style>
 </head>
 <body>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuRBjvJ_jFCkr16T4d5SoZC2yJM81f0OTHt9E8fxsuxG43Q/viewform?embedded=true" frameborder="0" scrolling="no">로드 중…</iframe>
 </body>
 </html>
+
