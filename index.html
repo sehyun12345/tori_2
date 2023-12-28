@@ -18,20 +18,29 @@
       margin: 0;
       padding: 0;
       background-color: #f0ebf8; /* Purple background color */
-      min-height: 200vh; /* Set minimum height to 100% of the viewport height */
     }
 
     iframe {
       width: 100%;
-      height: 100vh; /* Set the height to the full viewport height */
-    }
-
-    @media only screen and (min-width: 640px) {
-      iframe {
-        height: 506px; /* Set a fixed height for larger screens */
-      }
+      height: 100%;
+      display: block;
     }
   </style>
+  <script>
+    // iframe의 높이를 자동으로 조절하는 함수
+    function resizeIframe() {
+      var iframe = document.querySelector('iframe');
+      if (iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+      }
+    }
+
+    // 페이지 로드 후 iframe 크기 조절
+    window.onload = resizeIframe;
+
+    // 창 크기 변경 시 iframe 크기 조절
+    window.onresize = resizeIframe;
+  </script>
 </head>
 <body>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjuRBjvJ_jFCkr16T4d5SoZC2yJM81f0OTHt9E8fxsuxG43Q/viewform?embedded=true" frameborder="0" scrolling="no">로드 중…</iframe>
